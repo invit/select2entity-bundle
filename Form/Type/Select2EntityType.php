@@ -79,7 +79,7 @@ class Select2EntityType extends AbstractType
         ));
     }
 
-    public function getName()
+    public function getBlockPrefix()
     {
         return 'tetranz_select2entity';
     }
