@@ -10,7 +10,7 @@ use Symfony\Component\Form\FormInterface;
 use Symfony\Component\Form\FormView;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\OptionsResolver\OptionsResolverInterface;
-use Symfony\Component\Routing\Router;
+use Symfony\Component\Routing\RouterInterface;
 use Tetranz\Select2EntityBundle\Form\DataTransformer\EntitiesToPropertyTransformer;
 use Tetranz\Select2EntityBundle\Form\DataTransformer\EntityToPropertyTransformer;
 
@@ -28,7 +28,7 @@ class Select2EntityType extends AbstractType
     protected $minimumInputLength;
     protected $dataType;
 
-    public function __construct(EntityManager $em, Router $router, $minimumInputLength, $pageLimit, $dataType)
+    public function __construct(EntityManager $em, RouterInterface $router, $minimumInputLength, $pageLimit, $dataType)
     {
         $this->em = $em;
         $this->router = $router;
